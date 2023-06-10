@@ -1,8 +1,9 @@
 <?php
     session_start();
-
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.html');
+    }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +16,11 @@
         <h1>Selecciona tu casa</h1>
     </header>
     <main>
-        <button id="regresar">Regresar</button>
-        <button id="aceptar">Aceptar</button>
+        <form action="./pagPrincipal" method="post">
+                <input type="hidden" id="casa" >
+            <button id="regresar">Regresar</button>
+            <button id="aceptar" type="submit">Aceptar</button>
+        </form>
         <section>
             <article>
                 <h3>Halcones</h3>
