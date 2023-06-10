@@ -1,0 +1,19 @@
+/* ============FONTS=================== */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500;600;700;800&display=swap');
+
+
+body{
+    font-family: 'Assistant', sans-serif;
+    background-color: rgb(216, 239, 197);
+}
+h1{
+    color: rgb(47, 128, 47);
+}
+h3{
+    color: rgb(39, 162, 39);
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+}

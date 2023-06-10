@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="./statics/styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="login" >
         <h1>CASAS DEL CURSO WEB</h1>
-        <h3>Inicio de sesión</h3>
     </header>
-    <main>
+    <h3 class="login">Inicio de sesión</h3>
+    <main >
+        <div class="login">
         <form action="./dynamics/verificacion.php" method="post">
             <label for="usuario">Usuario <br>
                 <input type="text" name="usuario" id="usuario">
@@ -26,6 +27,7 @@
             <button type="reset">Corregir</button><br>
             <button id="registrarse">Registrarse</button>
         </form>
+        </div>
     </main>
     <script src="./dynamics/javascript/funcionalidad.js"></script>
 </body>
