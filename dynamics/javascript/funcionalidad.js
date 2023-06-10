@@ -11,4 +11,9 @@ window.addEventListener("click", ()=>{
 
     })
 
+    function cambiarCasa(){
+        hidden = document.getElementById("casa");
+        hidden.value = this.innerText;
+    }
+
 })
