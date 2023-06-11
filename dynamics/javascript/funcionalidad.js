@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (){
 
 window.addEventListener("load", ()=>{
-     let verPass = document.getElementById("verPass");
+    let verPass = document.getElementById("verPass");
     let contraseña = document.getElementById("contraseña");
     let sumar = document.getElementById("sumar");
     let restar = document.getElementById("restar");
@@ -17,19 +17,17 @@ window.addEventListener("load", ()=>{
         }
     })
     
-      sumar.addEventListener("click", ()=>{
+    sumar.addEventListener("click", ()=>{
     
-   
-     })
-       
-     restar.addEventListener("click", ()=>{
+    })
+    restar.addEventListener("click", ()=>{
 
             
-     })
+    })
 
-    const sectionHal = document.getElementById("sectionHalcones");
-    const sectionTepo = document.getElementById("sectionTeporingos");
-    const sectionAjo =  document.getElementById("sectionAjolotes");
+    const sectionHal = document.getElementById("halT");
+    const sectionTepo = document.getElementById("tepoT");
+    const sectionAjo =  document.getElementById("ajoT");
 
     sectionAjo.addEventListener("click", function (){
 
