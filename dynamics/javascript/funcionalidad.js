@@ -1,5 +1,7 @@
-window.addEventListener("click", ()=>{
-    let verPass = document.getElementById("verPass");
+document.addEventListener("DOMContentLoaded", function (){
+
+window.addEventListener("load", ()=>{
+     let verPass = document.getElementById("verPass");
     let contraseña = document.getElementById("contraseña");
     let sumar = document.getElementById("sumar");
     let restar = document.getElementById("restar");
@@ -14,18 +16,41 @@ window.addEventListener("click", ()=>{
             a++;
         }
     })
-
     
-    sumar.addEventListener("click", ()=>{
+      sumar.addEventListener("click", ()=>{
     
-    })
-    restar.addEventListener("click", ()=>{
+   
+     })
+       
+     restar.addEventListener("click", ()=>{
 
-    })
+            
+     })
 
-    function cambiarCasa(){
+    const sectionHal = document.getElementById("sectionHalcones");
+    const sectionTepo = document.getElementById("sectionTeporingos");
+    const sectionAjo =  document.getElementById("sectionAjolotes");
+
+    sectionAjo.addEventListener("click", function (){
+
         hidden = document.getElementById("casa");
-        hidden.value = this.innerText;
-    }
+        hidden.value = this.innerText; 
 
-})
+    });
+
+    sectionTepo.addEventListener("click", function (){
+
+        hidden = document.getElementById("casa");
+        hidden.value = this.innerText; 
+
+    });
+
+    sectionHal.addEventListener("click", function (){
+
+        chidden = document.getElementById("casa");
+        hidden.value = this.innerText; 
+
+    });
+});
+
+});
