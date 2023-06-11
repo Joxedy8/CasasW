@@ -1,21 +1,25 @@
-<?php
-    require "./dynamics/php/seguridad.php";
+<<?php
 
-    $usuario = (isset($_POST["usuario"]) && $_POST["usuario"] != "")? $_POST["usuario"] : false;
-    $contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_POST["contraseña"] : false;
+require "./dynamics/php/seguridad.php";
 
-    //cifrado
-    // $contraCifrada = cifrar($contraseña);
-    // $contraDescifrada = descifrar($contraCifrada);
-    // echo "Contra cifrada: $contraCifrada <br>";
+$usuario = (isset($_POST["usuario"]) && $_POST["usuario"] != "")? $_POST["usuario"] : false;
+$contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_POST["contraseña"] : false;
+
+// ------------------------------------HASHEO DE CONTRA------------------------------------
+
+//cifrado
+// $contraCifrada = cifrar($contraseña);
+// $contraDescifrada = descifrar($contraCifrada);
+// echo "Contra cifrada: $contraCifrada <br>";
     // echo "Contra normal: $contraDescifrada <br>";
-
+    
     // $contraHash = hashearContra($contraseña);
     $sal = generarSal();
     $pimienta = generarPimienta();
     $contraHash = hashearContra($contraseña.$pimienta.$sal);
-    echo "Contraseña hash: $contraHash <br>";
 
+    echo "Contraseña hash: $contraHash <br>";
+    
     function pass(){
         if(verificar_contra($contra, $contraseñaCorrecta, $salOriginal)){
             echo "Contraseña correcta";
@@ -23,14 +27,27 @@
             echo "Contraseña incorrecta";
         }
     }
+
+    // ------------------------------------PASO A LA BASE DE DATOS------------------------------------
     
-    $config = include("./dynamics/php/config.php");
+    $include = include("./dynamics/php/config.php");
     $conexion = connect();
+    $con = connect();
+    if($include && $connect){
+        $peticion = "INSERT INTO usuarios (user, pass) VALUES ('$usario', '$contraseña')";
+        $query = mysqli_query($con, $peticion);
+        echo $query;
+        //mysqli_query
+        //  si introducida -> bool(true)
+        //  no introducida -> bool(false)
+    }else{
+        echo "hubo un problema T-T";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasasW</title>
     <link rel="stylesheet" href="./statics/styles/style.css">
