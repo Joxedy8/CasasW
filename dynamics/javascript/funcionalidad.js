@@ -1,18 +1,31 @@
 document.addEventListener("DOMContentLoaded", function (){
 
 window.addEventListener("load", ()=>{
-    sumar = document.getElementById("sumar");
-    restar = document.getElementById("restar");
-    enviar = document.getElementById("enviar");
-
+     let verPass = document.getElementById("verPass");
+    let contraseña = document.getElementById("contraseña");
+    let sumar = document.getElementById("sumar");
+    let restar = document.getElementById("restar");
+    let enviar = document.getElementById("enviar");
+    let a = 1;
+    verPass.addEventListener("click", ()=>{
+        if(a==1){
+            contraseña.type = "text";
+            a--;
+        }else{
+            contraseña.type = "password";
+            a++;
+        }
+    })
     
-    // sumar.addEventListener("click", ()=>{
+      sumar.addEventListener("click", ()=>{
     
-    // })
-    // restar.addEventListener("click", ()=>{
+   
+     })
+       
+     restar.addEventListener("click", ()=>{
 
-    // })
-
+            
+     })
 
     const sectionHal = document.getElementById("sectionHalcones");
     const sectionTepo = document.getElementById("sectionTeporingos");
