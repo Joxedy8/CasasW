@@ -53,5 +53,6 @@
             }
         }
         return true;
+        echo json_encode(true); //aqui que ira?
     }
 ?>  

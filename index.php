@@ -18,16 +18,15 @@
 
     function pass(){
         if(verificar_contra($contra, $contraseñaCorrecta, $salOriginal)){
-        echo "Contraseña correcta";
+            echo "Contraseña correcta";
         }else{
-        echo "Contraseña incorrecta";
+            echo "Contraseña incorrecta";
         }
     }
     
     $config = include("./dynamics/php/config.php");
     $conexion = connect();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +42,7 @@
     <h3 class="login">Inicio de sesión</h3>
     <main>
         <div class="login">
-            <form action="./dynamics/verificacion.php" method="post">
+            <form action="./dynamics/php/verificacion.php" method="post">
                 <label for="usuario">Usuario <br>
                     <input type="text" name="usuario" id="usuario">
                 </label><br><br>
@@ -53,8 +52,8 @@
                 <label for="verPass">Ver contraseña <br>
                     <input type="checkbox" name="verPass" id="verPass">
                 </label><br><br>
-                <div id="btns" >
-                    <button type="submit">Enviar</button><br>
+                <div id="btns">
+                    <button type="submit" id="enviar">Enviar</button><br>
                     <button type="reset">Corregir</button><br>
                     <button id="registrarse">Registrarse</button>
                 </div>
