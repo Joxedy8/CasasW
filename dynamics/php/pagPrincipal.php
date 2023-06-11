@@ -1,6 +1,13 @@
 <?php
-    sess
+    session_start();
+    if(!isset($_SESSION["usuario"])){
+        header('Location: ../../index.html');
+    }
+    $casa = (isset($_POST["casa"]) && $_POST["casa"] != "")? $_POST["casa"] : false;
+    $_SESSION["casa"] = $casa;
 
+    $config = include("./config.php");
+    $conexion = connect();
     $sql1 = "SELECT user FROM usuarios";
     $sql2 = "SELECT home FROM casas";
     $res = mysqli_query($conexion, $sql1);
@@ -15,8 +22,6 @@
 </head>
 <body>
 <?php
-    require "config.php";
-    $conexion = connect();
     if(!$conexion){
         echo "No se pudo conectar con la base de datos";
     }else{
@@ -25,12 +30,12 @@
             <h1>Pagina principal</h1>
         </header>
         <main>
-            <h2>¡Bienvenido a la home de la web !</h2>
-            <h3>¡Tienes un total de  puntos!</h3>
+            <h2>¡Bienvenido a la home de la web '.$_SESSION["usuario"].'!</h2>
+            <h3>¡Tienes un total de (tantos) puntos!</h3>
             <section id="sumar">+</section>
             <section id="restar">-</section>
             <h3>¡Tu poderosa casa es de !</h3>
-            <h3>Tu casa tiene un total de   puntos</h3>
+            <h3>Tu casa tiene un total de (tantos)  puntos</h3>
         </main>
         ';
     }

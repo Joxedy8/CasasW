@@ -1,8 +1,9 @@
-<?php
-    session_start();
-
+ <?php
+     session_start();
+     if(!isset($_SESSION["usuario"])){
+         header('Location: ../../index.html');
+     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +19,11 @@
     </header>
     <main>
         <span class="backbtn">
-            <button id="regresar">Regresar</button>
-            <button id="aceptar">Aceptar</button>
+            <form action="./pagPrincipal" method="post">
+                    <input type="hidden" id="casa" >
+                <button id="regresar">Regresar</button>
+                <button id="aceptar" type="submit">Aceptar</button>
+            </form>
         </span>
         <span class="containerhome">
             <section id="halCont" class="homeCW">
@@ -42,6 +46,6 @@
             </section>
         </span>
     </main>
-    <script src="./dynamics/javascript/funcionalidad.js"></script>
+    <script src="../javascript/funcionalidad.js"></script>
 </body>
 </html>

@@ -20,16 +20,16 @@
     <h3 class="login">Registro</h3>
     <main>
         <div class="login">
-            <form action="../index.html" method="post">
-                <label for="usuario">Usuario <br>
-                    <input type="text" name="usuario" id="usuario">
-                </label><br><br>
-                <label for="contraseña">Contraseña <br>
-                    <input type="password"" name="contraseña" id="contraseña">
-                </label><br><br>
-                <label for="verPass">Ver contraseña <br>
-                    <input type="checkbox" name="verPass" id="verPass">
-                </label><br><br>
+        <form action="../../index.php" method="post">
+            <label for="usuario">Usuario <br>
+                <input type="text" name="usuario" id="usuario">
+            </label><br><br>
+            <label for="contraseña">Contraseña <br>
+                <input type="password" name="contraseña" id="contraseña">
+            </label><br><br>
+            <label for="verPass">Ver contraseña <br>
+                <input type="checkbox" name="verPass" id="verPass">
+            </label><br><br>
                 <div id="btns" >
                     <button type="submit" id="enviar">Enviar</button><br>
                     <button type="reset" id="corregir">Corregir</button><br>
