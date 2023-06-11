@@ -25,18 +25,21 @@ document.addEventListener("DOMContentLoaded", function (){
             console.log(datosJSON);
         })
     })
-
-
     sumar.addEventListener("click", ()=>{
         fetch("../php/sumar.php")
         .then((respuesta)=>{
             return respuesta.json();
         }).then((datosJSON)=>{
-            console.log()
+            console.log(datosJSON.pts_home);
         })
     })
     restar.addEventListener("click", ()=>{
-        fetch("../php/restar.php")       
+        fetch("../php/restar.php")
+        .then((respuesta)=>{
+            return respuesta.json();
+        }).then((datosJSON)=>{
+            console.log()
+        })       
     })
 
     //Selecciona tu casa
