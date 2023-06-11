@@ -1,0 +1,124 @@
+*[class ~= '2']{
+    opacity: 0%;
+}
+
+*[class ~= '3']{
+   opacity: 0%;
+}
+*[class ~= '4']{
+    opacity: 0%;
+ }
+ *[class ~= '5']{
+    opacity: 0%;
+ }
+ *[class ~= '6']{
+    opacity: 0%;
+ }
+ *[class ~= '7']{
+    opacity: 0%;
+ }
+ *[class ~= '8']{
+    opacity: 0%;
+ }
+ *[class ~= '9']{
+    opacity: 0%;
+ }
+*[class ~= '1']:defined{
+    
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count:1;
+    animation-timing-function: ease-in-out;
+
+}
+*[class ~= '2']:defined{
+   
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay:  calc(log(2,1))s;
+    animation-fill-mode: forwards;
+}
+
+*[class ~= '3']:defined{
+  
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay:  calc(log(2,2))s;
+    animation-fill-mode: forwards;
+}
+
+*[class ~= '4']:defined{
+    animation-fill-mode: forwards;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay:  calc(log(2,3))s;
+}
+*[class ~= '5']:defined{
+    opacity: 0%;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay:  calc(log(2,4))s;
+    animation-fill-mode: forwards;
+}
+
+*[class ~= '6']:defined{
+    opacity: 0%;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay:  calc(log(2,5))s;
+    animation-fill-mode: forwards;
+}
+
+*[class ~= '7']:defined{
+    opacity: 0%;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.38,.57,1,2);
+    animation-delay:  calc(log(2,6))s;
+    animation-fill-mode: forwards;
+}
+*[class ~= '8']:defined{
+    opacity: 0%;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay:  calc(log(2,7))s;
+    animation-fill-mode: forwards;
+}
+*[class ~= '9']:defined{
+    opacity: 0%;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay:  calc(log(2,8))s;
+    transition: opacity 2s ease-in-out ;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fall
+{
+from{
+    transform: translateY(-15px);
+    opacity: 0%;
+}
+    to{
+        transform: translateY(0px);
+        opacity: 100%;
+
+    }
+
+}

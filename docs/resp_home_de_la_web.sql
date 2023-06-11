@@ -60,6 +60,8 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
+ ALTER TABLE usuarios MODIFY COLUMN ID_HOME int(11) NULL;
 --
 -- Dumping data for table `usuarios`
 --

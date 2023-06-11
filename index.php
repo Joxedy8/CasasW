@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 require "./dynamics/php/seguridad.php";
 
@@ -18,7 +18,7 @@ $contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_
     $pimienta = generarPimienta();
     $contraHash = hashearContra($contraseña.$pimienta.$sal);
 
-    echo "Contraseña hash: $contraHash <br>";
+    //echo "Contraseña hash: $contraHash <br>";
     
     function pass(){
         if(verificar_contra($contra, $contraseñaCorrecta, $salOriginal)){
@@ -31,13 +31,13 @@ $contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_
     // ------------------------------------PASO A LA BASE DE DATOS------------------------------------
     
     $include = include("./dynamics/php/config.php");
-    $conexion = connect();
-
     $con = connect();
-    if($include && $connect){
-        $peticion = "INSERT INTO usuarios (user, pass) VALUES ('$usario', '$contraseña')";
+
+    
+    if($include && $con){
+        $peticion = "INSERT INTO usuarios (user, pass) VALUES ('$usuario', '$contraseña')";
         $query = mysqli_query($con, $peticion);
-        echo $query;
+       // echo $query;
         //mysqli_query
         //  si introducida -> bool(true)
         //  no introducida -> bool(false)
@@ -53,28 +53,29 @@ $contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasasW</title>
     <link rel="stylesheet" href="./statics/styles/style.css">
+    <link rel = "stylesheet" href = "./statics/styles/animations.css">
 </head>
 <body>
-    <header class="login" >
+    <header class="login 1" >
         <h1>CASAS DEL CURSO WEB</h1>
     </header>
-    <h3 class="login">Inicio de sesión</h3>
+    <h3 class="login 2">Inicio de sesión</h3>
     <main>
-        <div class="login">
-            <form action="./dynamics/verificacion.php" method="post">
-                <label for="usuario">Usuario <br>
+        <div class="login 3">
+            <form action="./dynamics/php/verificacion.php" method="post">
+                <label for="usuario" class = "4">Usuario <br>
                     <input type="text" name="usuario" id="usuario">
                 </label><br><br>
-                <label for="contraseña">Contraseña <br>
+                <label for="contraseña" class = "5">Contraseña <br>
                     <input type="password" name="contraseña" id="contraseña">
                 </label><br><br>
-                <label for="verPass">Ver contraseña <br>
+                <label for="verPass" class = "6">Ver contraseña <br>
                     <input type="checkbox" name="verPass" id="verPass">
                 </label><br><br>
-                <div id="btns" >
-                    <button type="submit">Enviar</button><br>
-                    <button type="reset">Corregir</button><br>
-                    <button id="registrarse">Registrarse</button>
+                <div id="btns">
+                <button type="submit" class = "7">Enviar</button><br>
+                <button type="reset" class = '8'>Corregir</button><br>
+                <button id="registrarse" class = '9'>Registrarse</button>
                 </div>
             </form>
         </div>
