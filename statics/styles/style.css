@@ -1,7 +1,20 @@
 /* ============FONTS=================== */
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500;600;700;800&display=swap');
+/* ===================SCROLLBAR======================== */
+body::-webkit-scrollbar{
+    width: 15px;
+    background: rgba(255, 255, 255, 0.778);
+}
+body::-webkit-scrollbar-thumb{
+    background: rgba(24, 112, 16, 0.778);
+    border-radius: 35px;
+    border-right: 4px solid rgba(255, 255, 255, 0.778);
 
-
+}
+body::-webkit-scrollbar-thumb:hover{
+    background: rgb(116, 224, 113);
+}
+/* =================ETIQUETAS======================*/
 body{
     font-family: 'Assistant', sans-serif;
     background-color: rgb(216, 239, 197);
@@ -10,9 +23,10 @@ h1{
     color: rgb(47, 128, 47);
 }
 h3{
+    size: bold;
     color: rgb(39, 162, 39);
 }
-
+/* ==============CLASS================== */
 .login{
     display: flex;
     justify-content: center;
@@ -20,7 +34,78 @@ h3{
     border-radius: 2rem;
     padding: 2rem;
 }
+.containerhome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.backbtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem;
+    
+
+}
+/* =====================CASAS================ */
+.homeCW{
+    padding: 1rem;
+    border-radius: 1.3rem;
+}
+
+#halCont:hover{
+    background-color: rgba(255, 153, 20, 0.466);
+}
+#tepoCont:hover{
+    background-color: rgba(73, 68, 19, 0.377);
+}
+#ajoCont:hover{
+    background-color: rgba(243, 107, 202, 0.466);
+}
+
+
+/* =============IDS=============================== */
 #btns{
     display: flex;
     justify-content: center;
+    
+}
+#regresar{
+    background-color: rgb(155, 185, 231);
+    border-color: rgb(70, 118, 223);
+    border-radius: 0.7rem;
+    border-style: solid;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    font-size: larger;
+}
+#aceptar{
+    background-color: rgb(155, 231, 159);
+    border-color: rgb(4, 112, 13);
+    border-radius: 0.7rem;
+    border-style: solid;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    font-size: larger;
+}
+
+
+#halT{
+    font-weight:800;
+    font-size:xx-large;
+
+    color: rgb(73, 46, 12);
+    
+}
+#tepoT{
+    font-weight:800;
+    font-size:xx-large;
+    color: rgb(27, 78, 34);
+}
+
+#ajoT{
+    font-weight:800;
+    font-size:xx-large;
+    color: rgb(206, 75, 97);
 }
