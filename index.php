@@ -1,3 +1,10 @@
+<?php
+    $usuario = (isset($_POST["usuario"]) && $_POST["usuario"] != "")? $_POST["usuario"] : false;
+    $contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_POST["contraseña"] : false;
+    
+    $config = include("./config.php");
+    $conexion = connect();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
