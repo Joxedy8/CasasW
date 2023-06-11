@@ -31,6 +31,7 @@ $contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_
     // ------------------------------------PASO A LA BASE DE DATOS------------------------------------
     
     $include = include("./dynamics/php/config.php");
+    $conexion = connect();
     $con = connect();
 
     
@@ -44,8 +45,7 @@ $contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "")? $_
     }else{
         echo "hubo un problema T-T";
     }
-    ?>
-
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
