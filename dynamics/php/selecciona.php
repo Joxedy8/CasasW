@@ -1,8 +1,8 @@
-<?php
-    session_start();
-    if(!isset($_SESSION["usuario"])){
-        header('Location: ../../index.html');
-    }
+ <?php
+     session_start();
+     if(!isset($_SESSION["usuario"])){
+         header('Location: ../../index.html');
+     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,22 +21,24 @@
             <button id="regresar">Regresar</button>
             <button id="aceptar" type="submit">Aceptar</button>
         </form>
+        <section >
+            <article>
+                <h3 id = "sectionHalcones">Halcones</h3>
+            </article>
+        
+        </section>
+        
         <section>
             <article>
-                <h3>Halcones</h3>
+                <h3 id = "sectionTeporingos">Teporingos</h3>
             </article>
         </section>
-        <section>
+        <section >
             <article>
-                <h3>Teporingos</h3>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h3>Ajolotes</h3>
+                <h3 id = "sectionAjolotes">Ajolotes</h3>
             </article>
         </section>
     </main>
-    <script src="./dynamics/javascript/funcionalidad.js"></script>
+    <script src="../javascript/funcionalidad.js"></script>
 </body>
 </html>
