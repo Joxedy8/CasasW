@@ -18,12 +18,12 @@
         <h3>Registro</h3>
     </header>
     <main>
-        <form action="../index.html" method="post">
+        <form action="../../index.php" method="post">
             <label for="usuario">Usuario <br>
                 <input type="text" name="usuario" id="usuario">
             </label><br><br>
             <label for="contraseña">Contraseña <br>
-                <input type="password"" name="contraseña" id="contraseña">
+                <input type="password" name="contraseña" id="contraseña">
             </label><br><br>
             <label for="verPass">Ver contraseña <br>
                 <input type="checkbox" name="verPass" id="verPass">
