@@ -36,7 +36,7 @@ CREATE TABLE `casas` (
 
 LOCK TABLES `casas` WRITE;
 /*!40000 ALTER TABLE `casas` DISABLE KEYS */;
-INSERT INTO `casas` VALUES (1,'ajolotes',5000),(2,'teporingos',350),(3,'halcones',345);
+INSERT INTO `casas` VALUES (1,'ajolotes',0),(2,'teporingos',0),(3,'halcones',0);
 /*!40000 ALTER TABLE `casas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
   `ID_USUARIO` int(11) NOT NULL AUTO_INCREMENT,
-  `ID_HOME` int(11) NOT NULL,
+  `ID_HOME` int(11) DEFAULT NULL,
   `user` varchar(50) NOT NULL,
   `pass` varchar(50) NOT NULL,
   `pts_ind` int(11) DEFAULT NULL,
@@ -60,8 +60,6 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-
- ALTER TABLE usuarios MODIFY COLUMN ID_HOME int(11) NULL;
 --
 -- Dumping data for table `usuarios`
 --
@@ -80,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-09 16:41:05
+-- Dump completed on 2023-06-11  1:00:29
