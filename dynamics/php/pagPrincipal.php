@@ -19,6 +19,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../statics/styles/style.css">
 </head>
 <body>
 <?php
@@ -26,16 +27,19 @@
         echo "No se pudo conectar con la base de datos";
     }else{
         echo '
-        <header>
+        <header class="login">
             <h1>Pagina principal</h1>
         </header>
-        <main>
-            <h2>¡Bienvenido a la home de la web '.$_SESSION["usuario"].'!</h2>
-            <h3>¡Tienes un total de (tantos) puntos!</h3>
-            <section id="sumar">+</section>
-            <section id="restar">-</section>
-            <h3>¡Tu poderosa casa es de !</h3>
-            <h3>Tu casa tiene un total de (tantos)  puntos</h3>
+        <main class="body">
+            <section class="pagPrincipal">
+                <h2>¡Bienvenido a la home de la web '.$_SESSION["usuario"].'!</h2>
+                <h3>¡Tienes un total de (tantos) puntos!</h3>
+                <div id="añadiendo">
+                    <article id="restar">-</article>
+                    <article id="sumar">+</article>
+                </div>
+                <h3>¡Tu poderosa casa es de '.$casa.'!</h3>
+                <h3>Tu casa tiene un total de (tantos) puntos</h3>
         </main>
         ';
     }
