@@ -98,6 +98,48 @@ h3 {
     background-color: rgba(243, 107, 202, 0.466);
 }
 
+/* =====================PAG PRINCIPAL====================== */
+.body{
+    display: flex;
+    justify-content: center;
+}
+.pagPrincipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    width: max-content;
+    background-color: rgb(255, 255, 237);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+#añadiendo{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+#sumar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(70, 118, 223);
+}
+#restar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(70, 118, 223);
+}
 
 /* =============IDS=============================== */
 #btns {
